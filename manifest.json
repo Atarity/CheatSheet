@@ -1,0 +1,23 @@
+﻿{
+  "manifest_version": 2,
+
+  "name": "CheatSheet",
+  "description": "Handy context hint database",
+  "version": "0.0.3",
+  "background": { 
+    "scripts": ["background.js"], 
+    "persistent": false
+   },
+  
+  "page_action": {
+    "default_icon": "book_alt2_32x28.png",           
+    "default_title": "CheatSheet for this page is available",
+    "default_popup": "popup.html"       
+  },
+  
+  "permissions" : [
+    "tabs", 
+    "storage"
+  ]
+
+}
