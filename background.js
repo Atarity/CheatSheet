@@ -1,7 +1,10 @@
 ﻿// Copyright (c) 2013 Mikhail Sannikov (atarity@gmail.com)
 // Use of this source code is governed by a GNU GPL 3 license that can be
 // found in http://www.gnu.org/licenses/gpl.html
-var siteList = new Array('ya.ru',
+var siteList = new Array('trello.com',
+                         'twitter.com',
+                         'wikipedia.org',
+                         'www.google.com',
                          'google.ru',
                          'mail.google.com',
                          'github.com',
@@ -37,20 +40,14 @@ function in_array(value, array, tab) {
           
       if(value.indexOf(siteList[i]) > -1) {                
           var localIndex = parseInt(localStorage.getItem('localStorage entries'));
-          
-          if (localIndex < 5) {
-              if (localStorage.getItem(tab.url) === null) {
-                  localIndex = localIndex + 1;
-                  localStorage.setItem('localStorage entries', localIndex);                    
-              }
-              // Push URL to LocalStorage as a key and siteList name as a value
-              localStorage.setItem(tab.url, siteList[i]);                         
-              return true;                
-          } else {                    
-              localStorage.setItem(tab.url, siteList[i]);                         
-              localStorage.setItem('localStorage entries', localIndex);
-              return true;                
-          }
+
+            if (localStorage.getItem(tab.url) === null) {
+                localIndex = localIndex + 1;
+                localStorage.setItem('localStorage entries', localIndex);                    
+            }
+            // Push URL to LocalStorage as a key and siteList name as a value
+            localStorage.setItem(tab.url, siteList[i]);                         
+            return true;                 
       }
   }
 return false;

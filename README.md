@@ -16,3 +16,6 @@ Handy web-context hint database
 * Shortcut for overlay
 * Options page
 * CSS for overlay
+
+###Useful links:###
+* [w:en:Special:ApiSandbox] (https://en.wikipedia.org/wiki/Special:ApiSandbox)
