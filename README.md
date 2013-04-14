@@ -10,11 +10,13 @@ Handy web-context hint database
 * ~~Slightly CSSed~~
 * ~~localStorage wipe mechanism or try iDB for dictionary cache~~
 * ~~Wiki JSONify and interaction~~
-* To normalize output to valid html 
-* Ok, do it with real CheatSheet now
-* Different cheat sheets with FS API
+* ~~Normalize output to valid html~~
+* ~~Ok, do it with real CheatSheet now~~
+* ~~Different cheat sheets on differrent sites~~
+* Tiny CSS fixes for scrollbar
 * Overlay instead of popup
 * Shortcut for overlay
+* Cheatsheets caching
 * Options page
 * CSS for overlay
 

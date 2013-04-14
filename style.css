@@ -9,9 +9,7 @@ body{
 	color:#666;
 
 	/* A webkit gradient: */
-	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#DDD));
-
-	text-shadow:1px 1px 0 white;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#DDD));	
 	font-family:Arial, Helvetica, sans-serif;
 	overflow-x:hidden;
 }
@@ -24,20 +22,19 @@ img{
 	-webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(rgba(255, 255, 255, 0.3))) 0 0 0 0 stretch stretch;
 }
 
-#value{
+#CSCdiv{
     display: block;
-    width: 200px;
-    text-align: center;    
-    font-size: 18px;
-	font-weight: normal;
-    text-shadow: white 0px 1px 1px;
+    width: 250px;
+    text-align: left;    
+    font-size: 12px;
+	font-weight: normal;    
     margin-bottom: 5px;
     padding: 5px 5px 10px 5px;
 }
 
-#title{
+#value{
     display: block;
-    width: 200px;
+    width: 250px;
     text-align: center;
     /* Webkit gradient: */
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#DDD));
@@ -79,10 +76,19 @@ h1{
 h2{
 	font-size:24px;
 	font-weight:normal;
-	right:40px;
-	padding-left:120px;
+	/*right:40px;*/
+    text-align: right;
+    padding: 0 30px 0 0;    
+	/*padding-left:120px;*/
 }
 
-h1,h2{
+h5{
+	font-size:16px;
+	font-weight:500;
+    margin: 7px 0 3px 3px;
+}
+
+h1,h2,h5{
 	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 0 white;
 }

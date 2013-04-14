@@ -1,6 +1,7 @@
 ﻿// Copyright (c) 2013 Mikhail Sannikov (atarity@gmail.com)
 // Use of this source code is governed by a GNU GPL 3 license that can be
 // found in http://www.gnu.org/licenses/gpl.html
+
 var siteList = new Array('trello.com',
                          'twitter.com',
                          'wikipedia.org',
