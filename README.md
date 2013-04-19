@@ -15,6 +15,10 @@ Handy web-context hint database
 * ~~Different cheat sheets on differrent sites~~
 * ~~Tiny CSS fixes for scrollbar~~
 * Overlay instead of popup
+  * Dimming
+  * Multiple columns
+  * Close button
+  * CSS makeup
 * Shortcut for overlay
 * Cheatsheets caching
 * Options page
