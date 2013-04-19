@@ -13,7 +13,7 @@ Handy web-context hint database
 * ~~Normalize output to valid html~~
 * ~~Ok, do it with real CheatSheet now~~
 * ~~Different cheat sheets on differrent sites~~
-* Tiny CSS fixes for scrollbar
+* ~~Tiny CSS fixes for scrollbar~~
 * Overlay instead of popup
 * Shortcut for overlay
 * Cheatsheets caching

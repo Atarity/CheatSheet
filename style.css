@@ -1,17 +1,18 @@
 ﻿*{
 	margin:0;
 	padding:0;
+    height: auto;       
 }
 
 body{
 	/* Setting default text color, background and a font stack */
 	font-size:12px;
 	color:#666;
-
 	/* A webkit gradient: */
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#DDD));	
-	font-family:Arial, Helvetica, sans-serif;
-	overflow-x:hidden;
+	font-family:Arial, Helvetica, sans-serif;	  
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 img{
@@ -61,6 +62,11 @@ a:hover{
 	text-decoration:underline;
 }
 
+/* Disappered scrollbar fix */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 h1{
 	/* Webkit gradient: */
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#DDD));
@@ -78,7 +84,7 @@ h2{
 	font-weight:normal;
 	/*right:40px;*/
     text-align: right;
-    padding: 0 30px 0 0;    
+    padding: 0 15px 0 0;    
 	/*padding-left:120px;*/
 }
 
