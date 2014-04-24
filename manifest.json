@@ -3,7 +3,7 @@
 
   "name": "CheatSheet",
   "description": "Handy context hint database",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "background": { 
     "scripts": ["background.js"], 
     "persistent": false
@@ -19,7 +19,7 @@
     "tabs",
     "contentSettings", 
     "storage",
-    "http://wiki.pixelkit.ru/*"
+    "*://*/*"
   ],
   "content_security_policy" : "script-src 'self'; object-src 'self'"
 

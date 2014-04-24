@@ -13,6 +13,11 @@ var siteList = new Array('trello.com',
                          'yandex.ru');
 // Check all opened tabs at startup
 localStorage.clear();
+// if localStorage entries does not exist set it to 0
+if (localStorage.getItem('localStorage entries') === null) {                
+    localStorage.setItem('localStorage entries', 0)
+};
+
 chrome.tabs.query({}, function (tabs) {
   var startTabs = new Array();
     for (var i = 0; i < tabs.length; i++) {
@@ -22,7 +27,7 @@ chrome.tabs.query({}, function (tabs) {
     for (var i = 0; i < startTabs.length; i++) {
         if (startTabs[i] != null) {          
           if (in_array(startTabs[i].url, siteList, startTabs[i])) {
-            chrome.pageAction.show(startTabs[i].id);
+            injection(startTabs[i].id); 
           }
           //console.log(startTabs[i]);
         }
@@ -31,9 +36,14 @@ chrome.tabs.query({}, function (tabs) {
         }
     }
 });
-// if localStorage entries does not exist set it to 0
-if (localStorage.getItem('localStorage entries') === null) {                
-    localStorage.setItem('localStorage entries', 0)
+// inject all scripts and pageActions on a tab
+function injection(tabId) {
+    chrome.pageAction.show(tabId);                       
+    chrome.tabs.executeScript(tabId, {file: "jquery.min.js"}, function() {
+        chrome.tabs.executeScript(tabId, {file: "jquery.hotkeys.js"}, function() {
+            chrome.tabs.executeScript(tabId, {file: "content-script.js"});
+        });
+    });
 };
 // Is URL part exist in array of legit? Please, move it localStorage
 function in_array(value, array, tab) {                                     
@@ -59,7 +69,7 @@ function checkForValidUrl(tabId, changeInfo, tab) {
   // Prevent twice loading, check SO thread: http://goo.gl/fF0iS
   if (url !== undefined && changeInfo.status == "complete") {   
         if (in_array(tab.url, siteList, tab)) {
-            chrome.pageAction.show(tabId); 
+            injection(tabId);            
             //console.log("CheatSheet for this URL are available in DB");
         }
    }
